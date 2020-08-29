@@ -1,6 +1,13 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 	<head>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176774471-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-176774471-1');
+		</script>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 		<?php wp_head(); ?>
