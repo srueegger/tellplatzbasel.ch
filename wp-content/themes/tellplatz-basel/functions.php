@@ -65,8 +65,6 @@ function tpb_startup_scripts() {
 		wp_enqueue_style( 'tellplatz-basel-style', DIST_CSS . '/theme.min.css', array('tellplatz-basel-google-fonts'), $modificated_css );
 		wp_register_script( 'tellplatz-basel-script', DIST_JS ."/theme.min.js", array('jquery', 'jquery-ui-widget'), $modificated_js, true );
 	}
-	/* Font Awesome Icons hinzufügen */
-	wp_enqueue_script( 'fontawesome-script', 'https://kit.fontawesome.com/79013a0f8d.js', null, null, true );
 	$global_vars = array(
 		'sharebuttons' => array(
 			'showLabel' => false,
