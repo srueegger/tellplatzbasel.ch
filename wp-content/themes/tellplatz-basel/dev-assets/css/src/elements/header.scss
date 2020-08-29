@@ -1,0 +1,123 @@
+#site_header {
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 15px 20px 0 rgba(175,175,175,.2);
+	background-color: rgba(255, 255, 255, .6);
+}
+
+.logo_text {
+	margin-left: 15px;
+	h1 {
+		font-size: 3.2rem;
+		line-height: 60px;
+		font-weight: 700;
+		margin-bottom: 0;
+		span {
+			font-weight: 500;
+			color: $color-secondary;
+		}
+		a {
+			&:hover,
+			&:focus {
+				color: $color-primary;
+			}
+		}
+	}
+	@media (min-width: 80.0rem) {
+		margin-left: 0;
+	}
+}
+
+.hamburger {
+	position: absolute;
+	right: 15px;
+	top: 13px;
+	&:focus,
+	&:hover {
+		background-color: transparent;
+	}
+	@media (min-width: 80.0rem) {
+		display: none;
+	}
+}
+
+#menu_container {
+	position: fixed;
+	width: 100%;
+	height: calc(var(--vh, 1vh) * 100 - 60px);
+	top: 60px;
+	background-color: $color-primary;
+	z-index: 200;
+	right: -100vh;
+	visibility: hidden;
+	padding: 0 25px;
+	overflow: hidden;
+	&.open {
+		right: 0;
+		visibility: visible;
+		animation: open-menu .5s linear;
+	}
+	@media (min-width: 80.0rem) {
+		position: static;
+		visibility: visible;
+		background-color: transparent;
+		height: 60px;
+		padding: 0;
+	}
+}
+
+#menu-hauptmenue {
+	list-style-type: none;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 75px;
+	.menu-item {
+		&:not(:last-of-type) {
+			margin-bottom: 25px;
+		}
+		a {
+			color: $color-initial;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 1.7rem;
+			hyphens: auto;
+			border-bottom: 3px solid transparent;
+			&:focus {
+				border-color: $color-initial;
+			}
+		}
+		&.current-menu-item {
+			a {
+				border-color: $color-initial;
+			}
+		}
+	}
+	@media (min-width: 80.0rem) {
+		text-align: right;
+		margin-top: 0;
+		.menu-item {
+			margin-bottom: 0 !important;
+			display: inline-block;
+			&:not(:last-of-type) {
+				margin-right: 15px;
+			}
+			a {
+				color: $color-primary;
+				line-height: 60px;
+				&:hover,
+				&:focus {
+					border-color: $color-primary;
+				}
+			}
+			&.current-menu-item {
+				a {
+					border-color: $color-primary;
+				}
+			}
+		}
+	}
+}

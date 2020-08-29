@@ -1,0 +1,21 @@
+#site_page {
+	h2,
+	h3 {
+		font-weight: 500;
+		hyphens: auto;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+	}
+	@media (min-width: 80.0rem) {
+		h2 {
+			font-size: 3.3rem;
+		}
+		h3 {
+			font-size: 2.7rem;
+		}
+	}
+}

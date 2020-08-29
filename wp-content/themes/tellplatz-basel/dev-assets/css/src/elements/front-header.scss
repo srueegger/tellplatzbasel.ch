@@ -1,0 +1,93 @@
+#front-header {
+	width: 100%;
+	height: calc(var(--vh, 1vh) * 100 - 60px);
+	overflow-y: hidden;
+	.first {
+		height: calc(var(--vh, 1vh) * 45);
+		padding: 0 15px;
+		h2 {
+			font-size: 2.5rem;
+			hyphens: auto;
+			margin: 2.5rem 0;
+		}
+		.button {
+			width: 100%;
+			&:first-of-type {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+	.second {
+		height: calc(var(--vh, 1vh) * 55 - 60px);
+		position: relative;
+		img {
+			width: calc(100% - 42px);
+			height: calc(var(--vh, 1vh) * 55 - 60px);
+			object-fit: cover;
+			object-position: center center;
+		}
+		.scroll-down {
+			position: absolute;
+			width: 42px;
+			right: 0;
+			bottom: 0;
+			height: calc(var(--vh, 1vh) * 55 - 60px);
+			background-color: $color-initial;
+			span {
+				writing-mode: vertical-rl;
+				line-height: 42px;
+				text-transform: uppercase;
+				transform: rotate(180deg);
+				font-weight: 500;
+				position: absolute;
+				bottom: 40px;
+			}
+			svg {
+				font-size: 3rem;
+				position: relative;
+				bottom: 0;
+				left: 5px;
+				color: $color-primary;
+				animation: scroll-down-icon 2s linear infinite alternate;
+			}
+		}
+	}
+	@media (min-width: 80.0rem) {
+		.first {
+			height: calc(var(--vh, 1vh) * 30);
+			padding: 0;
+			h2 {
+				margin: 4.5rem 0;
+				font-size: 4rem;
+				font-weight: 700;
+			}
+			.button {
+				width: auto;
+				font-size: 1.6rem;
+				&:not(:last-of-type) {
+					margin-right: 25px;
+				}
+			}
+		}
+		.second {
+			height: calc(var(--vh, 1vh) * 70 - 60px);
+			img {
+				height: calc(var(--vh, 1vh) * 70 - 60px);
+				width: calc(100% - 56px);
+				position: relative;
+				left: 56px;
+			}
+			.scroll-down {
+				width: 56px;
+				height: calc(var(--vh, 1vh) * 70 - 60px);
+				right: unset;
+				left: 0;
+				span {
+					line-height: 56px;
+					font-size: 2rem;
+					bottom: 60px;
+				}
+			}
+		}
+	}
+}

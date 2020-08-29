@@ -1,0 +1,16 @@
+.full-image {
+	&.with-background {
+		background-color: $color-primary;
+	}
+	img {
+		width: 100%;
+		height: calc(var(--vh, 1vh) * 55 - 60px);
+		object-fit: cover;
+		object-position: center center;
+	}
+	@media (min-width: 80.0rem) {
+		img {
+			height: calc(var(--vh, 1vh) * 70 - 60px);
+		}
+	}
+}

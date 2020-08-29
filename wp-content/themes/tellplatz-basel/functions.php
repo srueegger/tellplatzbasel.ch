@@ -14,6 +14,7 @@ define( 'DIST_JS', THEME_URI . '/dist-assets/js' );
 /***************************************
  * Include helpers
  ***************************************/
+require_once 'inc/gravityforms.php';
 
 /***************************************
  * 		Theme Support and Options
@@ -32,6 +33,7 @@ setlocale(LC_TIME, "de_CH.UTF8");
  ***************************************/
 function register_tpb_menu() {
 	register_nav_menu( 'main-menu', 'Hauptmenü' );
+	register_nav_menu( 'footer-menu', 'Footermenü' );
 }
 add_action( 'after_setup_theme', 'register_tpb_menu' );
 
@@ -39,7 +41,7 @@ add_action( 'after_setup_theme', 'register_tpb_menu' );
  * 		Enqueue scripts and styles.
  ***************************************/
 function tpb_startup_scripts() {
-	wp_enqueue_style( 'tellplatz-basel-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat&display=swap' );
+	wp_enqueue_style( 'tellplatz-basel-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap' );
 	if (WP_DEBUG) {
 		$modificated_css = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/css/theme.css' ) );
 		$modificated_js = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/js/theme.js' ) );
@@ -51,11 +53,13 @@ function tpb_startup_scripts() {
 		wp_enqueue_style( 'tellplatz-basel-style', DIST_CSS . '/theme.min.css', array('tellplatz-basel-google-fonts'), $modificated_css );
 		wp_register_script( 'tellplatz-basel-script', DIST_JS ."/theme.min.js", array('jquery', 'jquery-ui-widget'), $modificated_js, true );
 	}
+	/* Font Awesome Icons hinzufügen */
+	wp_enqueue_script( 'fontawesome-script', 'https://kit.fontawesome.com/79013a0f8d.js', null, null, true );
 	$global_vars = array(
 		'ajaxurl' => admin_url('admin-ajax.php'),
 		'homeurl' => HOME_URI
 	);
-	wp_localize_script( 'tellplatz-basel-script', 'global_vars', $global_vars );
+	//wp_localize_script( 'tellplatz-basel-script', 'global_vars', $global_vars );
 	wp_enqueue_script( 'tellplatz-basel-script' );
 }
 add_action( "wp_enqueue_scripts", "tpb_startup_scripts" );
@@ -82,3 +86,15 @@ function tpb_remove_menus() {
 	remove_menu_page( 'edit-comments.php' );
 }
 add_action( 'admin_menu', 'tpb_remove_menus' );
+
+/***************************************
+ * Draw Page Titel
+ ***************************************/
+function tpb_page_title($title, $titletyp = 3, $echo = true) {
+	$draw_title = '<div class="title-bar"><h' . $titletyp . '>' . $title . '</h' . $titletyp . '></div>';
+	if($echo) {
+		echo $draw_title;
+	} else {
+		return $draw_title;
+	}
+}

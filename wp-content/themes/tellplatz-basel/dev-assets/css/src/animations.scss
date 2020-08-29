@@ -1,0 +1,17 @@
+@keyframes scroll-down-icon {
+	from {
+		bottom: 0;
+	}
+	to {
+		bottom: 15px;
+	}
+}
+
+@keyframes open-menu {
+	from {
+		right: -100vw;
+	}
+	to {
+		right: 0;
+	}
+}

@@ -1,0 +1,39 @@
+#site_footer {
+	background-color: $color-primary;
+	padding: 15px 0;
+}
+
+#menu-footermenue {
+	list-style-type: none;
+	text-align: center;
+	margin-bottom: 0;
+	.menu-item {
+		&:not(:last-of-type) {
+			margin-bottom: 20px;
+		}
+		a {
+			color: $color-initial;
+			font-weight: 500;
+			font-size: 1.7rem;
+			text-transform: uppercase;
+			&:hover,
+			&:focus {
+				font-weight: 700;
+			}
+		}
+		&.current-menu-item {
+			a {
+				font-weight: 700;
+			}
+		}
+	}
+	@media (min-width: 80.0rem) {
+		text-align: left;
+		.menu-item {
+			display: inline;
+			&:not(:last-of-type) {
+				margin-right: 25px;
+			}
+		}
+	}
+}

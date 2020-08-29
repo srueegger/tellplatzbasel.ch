@@ -1,0 +1,61 @@
+html,
+body {
+	overflow-x: hidden !important;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	&.no-scroll {
+		overflow-y: hidden;
+	}
+}
+
+#site_wrapper {
+	position: relative;
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+main {
+	outline: none;
+	margin-top: 60px; /* Spacer for Fixed Header */
+	min-height: calc(var(--vh, 1vh) * 100 - 60px);
+}
+
+/* Bugfix Repsonsive Columns - Miligram CSS Framework */
+@media (max-width: 40rem) {
+	.row .column.responsive[class*=" column-"] {
+		margin-left: 0;
+		max-width: 100%;
+	}
+	/* "2 Columns Text not mobile */
+}
+
+.container {
+	padding: 0;
+	@media (min-width: 80.0rem) {
+		padding: 0 2rem;
+	}
+}
+
+[role="button"] {
+	cursor: pointer;
+}
+
+.mobile-padding {
+	padding: 0 15px;
+	@media (min-width: 80.0rem) {
+		padding: 0;
+	}
+}
+
+.two-columns {
+	p {
+		column-count: 1;
+	}
+	@media (min-width: 80.0rem) {
+		p {
+			column-count: 2;
+		}
+	}
+}
