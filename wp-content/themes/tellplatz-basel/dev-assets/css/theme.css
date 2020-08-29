@@ -1097,6 +1097,10 @@ main {
   }
 }
 
+.bold {
+  font-weight: 900;
+}
+
 .mt-25 {
   margin-top: 25px;
 }
@@ -1497,12 +1501,16 @@ main {
 .testimonial-page-mobile .testimonial-mobile-image-container {
   background-color: #9b4dca;
   text-align: center;
+  padding: 15px;
 }
 .testimonial-page-mobile .testimonial-mobile-image-container img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 100%;
+}
+.testimonial-page-mobile .testimonial-mobile-image-container:first-of-type {
+  padding-top: 0;
 }
 .testimonial-page-mobile .testimonial-mobile-text-container {
   padding: 15px;
