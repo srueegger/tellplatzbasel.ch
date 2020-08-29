@@ -68,10 +68,31 @@ function tpb_startup_scripts() {
 	/* Font Awesome Icons hinzufügen */
 	wp_enqueue_script( 'fontawesome-script', 'https://kit.fontawesome.com/79013a0f8d.js', null, null, true );
 	$global_vars = array(
-		'ajaxurl' => admin_url('admin-ajax.php'),
-		'homeurl' => HOME_URI
+		'sharebuttons' => array(
+			'showLabel' => false,
+			'showCount' => false,
+			'shareIn' => 'popup',
+			'shares' => array(
+				array(
+					'share' => 'facebook',
+					'logo' => 'fab fa-facebook-f fa-fw'
+				),
+				array(
+					'share' => 'twitter',
+					'logo' => 'fab fa-twitter fa-fw'
+				),
+				array(
+					'share' => 'whatsapp',
+					'logo' => 'fab fa-whatsapp fa-fw'
+				),
+				array(
+					'share' => 'email',
+					'logo' => 'fas fa-at'
+				)
+			)
+		)
 	);
-	//wp_localize_script( 'tellplatz-basel-script', 'global_vars', $global_vars );
+	wp_localize_script( 'tellplatz-basel-script', 'global_vars', $global_vars );
 	wp_enqueue_script( 'tellplatz-basel-script' );
 }
 add_action( "wp_enqueue_scripts", "tpb_startup_scripts" );

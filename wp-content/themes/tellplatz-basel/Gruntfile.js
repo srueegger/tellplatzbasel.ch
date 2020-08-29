@@ -17,7 +17,8 @@ module.exports = function( grunt ) {
             },
             basetheme: {
                 src: [
-					'dev-assets/js/_vendor/*.js',
+                    'dev-assets/js/_vendor/*.js',
+                    'node_modules/jssocials/dist/jssocials.js',
                     'dev-assets/js/src/main.js'
                 ],
                 dest: 'dev-assets/js/theme.js'

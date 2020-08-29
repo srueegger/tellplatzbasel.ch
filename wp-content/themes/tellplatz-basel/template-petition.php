@@ -9,8 +9,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post()
 		<div class="row">
 			<div class="column">
 				<div class="mobile-padding">
-					<a href="#" target="_self" class="button"><i class="fas fa-pencil"></i>Petition jetzt unterschreiben</a>
-					<a href="#" target="_blank" class="button button-outline"><i class="fas fa-cloud-download-alt"></i>Unterschriftenbogen herunterladen</a>
+					<a href="<?php echo HOME_URI; ?>/#petition" target="_self" class="button"><i class="fas fa-pencil"></i>Petition jetzt unterschreiben</a>
+					<a href="#" target="_blank" class="button button-outline"><i class="fas fa-cloud-download-alt"></i>Herunterladen</a>
 					<div class="clearfix"></div>
 				</div>
 			</div>

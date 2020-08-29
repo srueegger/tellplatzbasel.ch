@@ -12,7 +12,7 @@
 					<div class="row">
 						<div class="column column-30">
 							<div class="logo_text">
-								<h1><a href="<?php echo HOME_URI; ?>" target="_self">Tellplatz<span>Basel</span></a></h1>
+								<h1><a href="<?php echo HOME_URI; ?>" target="_self"><i class="fas fa-heart"></i>Tellplatz<span>Basel</span></a></h1>
 							</div>
 						</div>
 						<?php

@@ -1,5 +1,8 @@
 .full-image {
 	&.with-background {
+		background-color: $color-secondary;
+	}
+	&.with-background-primary {
 		background-color: $color-primary;
 	}
 	img {
