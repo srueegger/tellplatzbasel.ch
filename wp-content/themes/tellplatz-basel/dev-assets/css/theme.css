@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Set Charset */
 /* Import Global Variables */
 /*!
@@ -1378,6 +1379,185 @@ main {
   #site_page h3 {
     font-size: 2.7rem;
   }
+}
+
+.testimonial-page {
+  display: none;
+}
+.testimonial-page .row .column {
+  position: relative;
+  padding: 0 !important;
+}
+.testimonial-page .row .column .testimonial-image {
+  background-color: #9b4dca;
+  min-height: 350px;
+  position: relative;
+}
+.testimonial-page .row .column .testimonial-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 100%;
+  border: 5px solid #fff;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+}
+.testimonial-page .row .column .testimonial-image .image-hover-element {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  cursor: pointer;
+  display: none;
+  visibility: hidden;
+}
+.testimonial-page .row .column .testimonial-image .image-hover-element svg {
+  color: #fff;
+  font-size: 3rem;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+}
+.testimonial-page .row .column .testimonial-image:hover .image-hover-element {
+  display: block;
+  visibility: visible;
+}
+.testimonial-page .row .column blockquote.testimonial {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: "Source Code Pro", monospace;
+  padding: 25px;
+  padding-right: 50px;
+  position: absolute;
+  left: 25px;
+  bottom: 50%;
+  transform: translateY(50%);
+  width: calc(100% - 75px);
+  hyphens: auto;
+}
+.testimonial-page .row .column blockquote.testimonial p {
+  font-size: 2.2rem;
+}
+.testimonial-page .row .column blockquote.testimonial footer {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+}
+.testimonial-page .row .column blockquote.testimonial footer:before {
+  content: "―";
+  margin-right: 7px;
+}
+.testimonial-page .row .column blockquote.testimonial footer:after {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "";
+  display: none;
+}
+.testimonial-page .row .column blockquote.testimonial footer svg {
+  color: #9b4dca;
+  font-size: 6rem;
+  position: absolute;
+  right: -50px;
+  top: 0;
+}
+.testimonial-page .row .column blockquote.testimonial footer strong {
+  color: #000;
+}
+.testimonial-page .row:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.testimonial-page .row:nth-child(even) .column blockquote {
+  left: 50px;
+}
+.testimonial-page .row:nth-child(even) .column blockquote.testimonial footer:after {
+  content: "";
+}
+.testimonial-page .row:nth-child(even) .column blockquote.testimonial footer svg {
+  right: unset;
+  left: -50px;
+}
+@media (min-width: 80rem) {
+  .testimonial-page {
+    display: block;
+  }
+}
+
+.testimonial-page-mobile {
+  display: block;
+}
+.testimonial-page-mobile .testimonial-mobile-image-container {
+  background-color: #9b4dca;
+  text-align: center;
+}
+.testimonial-page-mobile .testimonial-mobile-image-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.testimonial-page-mobile .testimonial-mobile-text-container {
+  padding: 15px;
+}
+.testimonial-page-mobile .testimonial-mobile-text-container blockquote p {
+  hyphens: auto;
+}
+@media (min-width: 80rem) {
+  .testimonial-page-mobile {
+    display: none;
+  }
+}
+
+#testimonial_image_wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  top: 0;
+  left: 0;
+  z-index: 300;
+  display: none;
+  visibility: hidden;
+}
+#testimonial_image_wrapper .wrapper {
+  padding: 75px;
+  text-align: center;
+}
+#testimonial_image_wrapper .wrapper img {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 50);
+  object-fit: contain;
+}
+#testimonial_image_wrapper .wrapper h5, #testimonial_image_wrapper .wrapper h6 {
+  color: #fff;
+}
+#testimonial_image_wrapper .wrapper h5 {
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+#testimonial_image_wrapper .wrapper h6 {
+  font-style: italic;
+}
+#testimonial_image_wrapper .wrapper span {
+  position: absolute;
+  right: 50px;
+}
+#testimonial_image_wrapper .wrapper span svg {
+  color: #fff;
+  font-size: 8rem;
+}
+#testimonial_image_wrapper.open {
+  display: block;
+  visibility: visible;
 }
 
 #site_footer {

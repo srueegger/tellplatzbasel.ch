@@ -27,6 +27,14 @@ setlocale(LC_TIME, "de_CH.UTF8");
 /***************************************
  * Custom Image Size
  ***************************************/
+add_image_size( 'testimonial-page', 300, 300, true );
+add_image_size( 'testimonial-page-2x', 600, 600, true );
+add_image_size( 'fullwidth-mobile', 333, 9999, false );
+add_image_size( 'fullwidth-mobile-2x', 666, 9999, false );
+add_image_size( 'fullwidth-tablet', 726, 9999, false );
+add_image_size( 'fullwidth-tablet-2x', 1452, 9999, false );
+add_image_size( 'fullwidth-desktop', 1920, 9999, false );
+add_image_size( 'fullwidth-desktop-2x', 3840, 9999, false );
 
 /***************************************
  * Add Wordpress Menus
@@ -41,7 +49,11 @@ add_action( 'after_setup_theme', 'register_tpb_menu' );
  * 		Enqueue scripts and styles.
  ***************************************/
 function tpb_startup_scripts() {
-	wp_enqueue_style( 'tellplatz-basel-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap' );
+	if(!is_page_template( 'template-testimonials.php' )) {
+		wp_enqueue_style( 'tellplatz-basel-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap', null, null );
+	} else {
+		wp_enqueue_style( 'tellplatz-basel-google-fonts', 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,700;1,300&family=Source+Code+Pro&display=swap', null, null );
+	}
 	if (WP_DEBUG) {
 		$modificated_css = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/css/theme.css' ) );
 		$modificated_js = date( 'YmdHis', filemtime( get_stylesheet_directory() . '/dev-assets/js/theme.js' ) );

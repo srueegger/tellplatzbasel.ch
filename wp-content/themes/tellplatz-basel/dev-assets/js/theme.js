@@ -27,4 +27,24 @@
 		window.location.hash = scroll_to_container;
 	});
 
+	/* Bild auf Testimonial Seite in gross anzeigen */
+	$('.image-hover-element').on('click', function() {
+		var testimonial_name = $(this).data('name');
+		var testimonial_job = $(this).data('job');
+		var testimonial_image = $(this).data('image');
+		/* Inhalte einfügen */
+		var overscreen_container = $('#testimonial_image_wrapper');
+		overscreen_container.find('h5').text(testimonial_name);
+		overscreen_container.find('h6').text(testimonial_job);
+		overscreen_container.find('img').attr('src', testimonial_image)
+		$('body').addClass('no-scroll');
+		overscreen_container.addClass('open');
+	});
+
+	/* Testimonial Wrapper schliessen */
+	$('#testimonial_image_wrapper .close').on('click', function() {
+		$('body').removeClass('no-scroll');
+		$('#testimonial_image_wrapper').removeClass('open');
+	});
+
 })(jQuery);

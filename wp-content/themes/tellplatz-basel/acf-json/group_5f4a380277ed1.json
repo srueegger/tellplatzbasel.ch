@@ -1,0 +1,83 @@
+{
+    "key": "group_5f4a380277ed1",
+    "title": "Felder für Testimonialeintrag",
+    "fields": [
+        {
+            "key": "field_5f4a380e31544",
+            "label": "Berufsbezeichnung",
+            "name": "testimonial_job",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f4a383431545",
+            "label": "Zitat",
+            "name": "testimonial_quote",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5f4a5e4fdbfcf",
+            "label": "Höhe",
+            "name": "testimonial_height",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 350,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 350,
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "tpb-testimonials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1598709368
+}

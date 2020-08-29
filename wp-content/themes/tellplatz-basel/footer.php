@@ -17,6 +17,7 @@
 				</div>
 			</footer>
 		</div>
+		<script data-search-pseudo-elements type='text/javascript' src='https://kit.fontawesome.com/79013a0f8d.js' id='fontawesome-script-js'></script>
 		<?php wp_footer(); ?>
 	</body>
 </html>

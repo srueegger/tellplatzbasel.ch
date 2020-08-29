@@ -1,0 +1,43 @@
+{
+    "key": "group_5f4a3a51651cb",
+    "title": "Testimonials Seite",
+    "fields": [
+        {
+            "key": "field_5f4a3a6530b10",
+            "label": "Info",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Zeigt automatisch alle Testimonials in zufälliger Reihenfolge an.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-testimonials.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1598700176
+}
