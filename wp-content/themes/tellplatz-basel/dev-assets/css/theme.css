@@ -1746,7 +1746,7 @@ main {
   font-size: 6rem;
   position: absolute;
   right: -50px;
-  top: 0;
+  top: 25px;
 }
 .testimonial-page .row .column blockquote.testimonial footer strong {
   color: #000;
