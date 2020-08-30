@@ -11,6 +11,11 @@
 		object-fit: cover;
 		object-position: center center;
 	}
+	&.full-height {
+		img {
+			height: calc(var(--vh, 1vh) * 90);
+		}
+	}
 	@media (min-width: 80.0rem) {
 		img {
 			height: calc(var(--vh, 1vh) * 70 - 60px);

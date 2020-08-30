@@ -1,7 +1,8 @@
 <?php
 /* Template Name: Petition */
 get_header();
-if ( have_posts() ) : while ( have_posts() ) : the_post()
+if ( have_posts() ) : while ( have_posts() ) : the_post();
+$image = get_field( 'petition_image' );
 ?>
 <div id="site_page">
 	<?php tpb_page_title( get_the_title(), 2 ); ?>
@@ -30,6 +31,14 @@ if ( have_posts() ) : while ( have_posts() ) : the_post()
 			</div>
 		</div>
 	</div>
+</div>
+<div class="full-image with-background full-height">
+	<picture>
+		<source media="(min-width: 80em)" srcset="<?php echo $image['sizes']['fullwidth-desktop']; ?> 1x, <?php echo $image['sizes']['fullwidth-desktop-2x']; ?> 2x">
+		<source media="(min-width: 40em)" srcset="<?php echo $image['sizes']['fullwidth-tablet']; ?> 1x, <?php echo $image['sizes']['fullwidth-tablet-2x']; ?> 2x">
+		<source srcset="<?php echo $image['sizes']['fullwidth-mobile']; ?> 1x, <?php echo $image['sizes']['fullwidth-mobile-2x']; ?> 2x">
+		<img loading="lazy" src="<?php echo $image['sizes']['fullwidth-mobile']; ?>" alt="<?php $image['alt']; ?>">
+	</picture>
 </div>
 <?php
 endwhile; endif;

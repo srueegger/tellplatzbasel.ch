@@ -35,7 +35,7 @@ $third_image = get_field( 'front_third_img' );
 	<div class="container mt-45">
 		<div class="row">
 			<div class="column">
-				<div class="mobile-padding two-columns">
+				<div class="mobile-padding">
 					<h4 class="bold"><?php the_field( 'front_second_title' ); ?></h4>
 					<?php
 					the_field( 'front_second_txt' );

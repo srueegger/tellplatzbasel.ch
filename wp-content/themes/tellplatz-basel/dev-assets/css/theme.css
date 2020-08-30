@@ -1566,7 +1566,7 @@ main {
 }
 @media (min-width: 80rem) {
   #front-header .first {
-    height: calc(var(--vh, 1vh) * 30);
+    height: calc(var(--vh, 1vh) * 40);
     padding: 0;
   }
   #front-header .first h2 {
@@ -1586,17 +1586,18 @@ main {
     margin-right: 25px;
   }
   #front-header .second {
-    height: calc(var(--vh, 1vh) * 70 - 60px);
+    height: calc(var(--vh, 1vh) * 60 - 60px);
   }
   #front-header .second img {
-    height: calc(var(--vh, 1vh) * 70 - 60px);
+    height: calc(var(--vh, 1vh) * 60 - 60px);
     width: calc(100% - 56px);
     position: relative;
     left: 56px;
+    object-position: center top;
   }
   #front-header .second .scroll-down {
     width: 56px;
-    height: calc(var(--vh, 1vh) * 70 - 60px);
+    height: calc(var(--vh, 1vh) * 60 - 60px);
     right: unset;
     left: 0;
   }
@@ -1643,6 +1644,9 @@ main {
   height: calc(var(--vh, 1vh) * 55 - 60px);
   object-fit: cover;
   object-position: center center;
+}
+.full-image.full-height img {
+  height: calc(var(--vh, 1vh) * 90);
 }
 @media (min-width: 80rem) {
   .full-image img {
